@@ -1,0 +1,56 @@
+<!-- /*
+ * @Author: Zhengxuan Ye 
+ * @Date: 2025-03-08 20:42:36 
+ * @Last Modified by:   Zhengxuan Ye 
+ * @Last Modified time: 2025-03-08 20:42:36 
+ */ -->
+<!-- grid_area的演示 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="header">Header</div>
+    <div class="main">Main Content</div>
+    <div class="sidebar">Sidebar</div>
+    <div class="footer">Footer</div>
+  </div>
+</body>
+</html>
+<style>
+  .container {
+  display: grid;
+  min-height:100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto 500px auto;
+  /* 给每个网格项指定一个名字（通过 `grid-area` 属性） */
+  grid-template-areas:
+    "header header header"
+    "main main sidebar"
+    "footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  background-color: #fdd;
+}
+
+.main {
+  grid-area: main;
+  background-color: #dfd;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  background-color: #ddf;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #ffd;
+}
+</style>

@@ -1,0 +1,74 @@
+<!-- /*
+ * @Author: Zhengxuan Ye 
+ * @Date: 2025-03-08 21:08:03 
+ * @Last Modified by:   Zhengxuan Ye 
+ * @Last Modified time: 2025-03-08 21:08:03 
+ */ -->
+ <!-- inline-grid与grid的区别 -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+ </head>
+ <body>
+  <!-- Block Grid -->
+  <div class="block-grid">
+    <div class="box1">First</div>
+    <div class="box2">Second</div>
+    <div class="box3">Third</div>
+  </div>
+  <!-- Inline Grid -->
+  <span class="inline-grid">
+    <div class="box4">Fourth</div>
+    <div class="box5">Fifth</div>
+    <div class="box6">Sixth</div>
+  </span>
+ </body>
+ </html>
+ <style>
+  .block-grid {
+  display: grid;
+  min-height:50vh;  
+  background-color: lightblue;
+  grid-template-columns: 200px 200px ;
+  grid-template-rows: 200px 200px;
+  gap:10px 10px;
+  font-size:50px;
+  color:white;
+  text-align:center;
+}
+
+.inline-grid {
+  display: inline-grid;
+  min-height:50vh;  
+  background-color: lightgreen;
+  grid-template-columns: 200px 200px ;
+  grid-template-rows: 200px 200px;
+  gap:10px 10px;
+  font-size:50px;
+  color:white;
+  text-align:center;
+}
+
+.box1{
+    background-color: red;
+  }
+  .box2{
+    background-color: blue;
+  }
+  .box3{
+    background-color: green;
+  }
+  .box4{
+    background-color: rgb(216, 216, 89);
+  }
+  .box5{
+    background-color: purple;
+  }
+  .box6{
+    background-color: orange;
+  }
+ </style>
+

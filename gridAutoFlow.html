@@ -1,0 +1,59 @@
+<!-- /*
+ * @Author: Zhengxuan Ye 
+ * @Date: 2025-03-08 20:42:41 
+ * @Last Modified by:   Zhengxuan Ye 
+ * @Last Modified time: 2025-03-08 20:42:41 
+ */ -->
+<!-- auto-flow的特殊举例 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grid Auto Flow Dense Example</title>
+<style>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /* 5列 */
+  grid-template-rows: repeat(5, 100px); /* 5行 */
+  gap: 10px; /* 网格间距 */
+  grid-auto-flow: row dense; /* 启用dense算法以尝试填满所有空位 */
+  font-size:30px;
+  color:white;
+  text-align:center;
+}
+
+.large-item {
+  background-color: #4CAF50;
+  grid-column: span 2; /* 跨越两列 */
+  grid-row: span 2; /* 跨越两行 */
+  line-height:200px;
+}
+
+.small-item {
+  background-color: #FF5733;
+  line-height:100px;
+}
+
+.special-item {
+  background-color: #C70039;
+  grid-column: span 3; /* 占据额外空间 */
+  grid-row: span 1;
+  line-height:100px;
+}
+</style>
+</head>
+<body>
+
+<div class="grid-container">
+  <div class="large-item">Large Item 1</div>
+  <div class="small-item">Small Item 1</div>
+  <div class="small-item">Small Item 2</div>
+  <div class="special-item">Special Item</div>
+  <div class="small-item">Small Item 3</div>
+  <div class="large-item">Large Item 2</div>
+  <div class="small-item">Small Item 4</div>
+  <div class="small-item">Small Item 5</div>
+</div> 
+</body>
+</html>

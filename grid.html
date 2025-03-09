@@ -1,0 +1,82 @@
+<!-- /*
+ * @Author: Zhengxuan Ye 
+ * @Date: 2025-03-08 20:42:29 
+ * @Last Modified by:   Zhengxuan Ye 
+ * @Last Modified time: 2025-03-08 20:42:29 
+ */ -->
+ <!-- gird的基本样式 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="box1">First</div>
+    <div class="box2">Second</div>
+    <div class="box3">Third</div>
+    <div class="box4">Fourth</div>
+    <div class="box5">Fifth</div>
+    <div class="box6">Sixth</div>
+  </div>
+</body>
+</html>
+<style>
+  .container{
+    display:grid;
+    min-height:100vh;  
+    background-color: pink;
+
+    /*  声明三列，宽度分别为300px,300px,300px 
+    grid-template-columns:repeat(3,300px);
+    声明三行，高度分别为300px,300px 
+    grid-template-rows:repeat(2,300px) ;  */
+
+/*  grid-template-columns: 300px auto 300px;  第二列列宽根据内容自动调整 
+    grid-template-rows: 200px auto; 第二行高根据内容自动调整  */
+
+/*     grid-template-columns: 1fr 2fr 1fr;第二列是其他两列的两倍宽 
+    grid-template-rows: 1fr 2fr ;  第二行是第一行的两倍宽  */
+
+    /* grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));  根据容器宽度自动填充列  */
+    grid-template-columns:repeat(3,300px);
+    grid-template-rows:repeat(2,300px) ;
+
+   /*  row-gap: 10px; 行间距 
+    column-gap: 20px; 列间距  */
+
+    /* 等效 */
+    gap:10px 20px ;
+
+    font-size:50px;
+    color:white;
+    justify-items:stretch;
+    align-items:stretch;
+    justify-content: grid-start;
+    align-content: grid-start;
+  }
+  .box1{
+    background-color: rgb(160, 94, 94);
+    justify-self:start;
+  }
+  .box2{
+    background-color: rgb(61, 61, 113);
+  }
+  .box3{
+    background-color: rgb(99, 176, 99);
+  }
+  .box4{
+    background-color: rgb(198, 198, 119);
+  }
+  .box5{
+    background-color: rgb(161, 89, 161);
+  }
+  .box6{
+    background-color: rgb(151, 124, 73);
+  }
+  .box7{
+    background-color: rgb(133, 131, 131);
+  }
+</style>

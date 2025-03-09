@@ -1,0 +1,67 @@
+<!-- /*
+ * @Author: Zhengxuan Ye 
+ * @Date: 2025-03-08 21:50:01 
+ * @Last Modified by:   Zhengxuan Ye 
+ * @Last Modified time: 2025-03-08 21:50:01 
+ */ -->
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Grid Layout Example</title>
+ <style>
+   .container {
+     display: grid;
+     /* 定义网格区域 */
+     grid-template-areas:
+       'header header header'
+       'main main sidebar'
+       'footer footer footer';
+     /* 定义网格行和列的尺寸 */
+     grid-template-rows: auto 1fr auto;
+     grid-template-columns: 1fr 1fr 200px;
+     gap: 10px; /* 网格间距 */
+     height: 100vh; /* 让容器占满视口高度 */
+     padding: 10px;
+   }
+ 
+   /* 定义每个盒子的样式 */
+   .header { 
+     grid-area: header;
+     background-color: #74b276; 
+   }
+   .main { 
+     grid-area: main;
+     background-color: #6faee1; 
+   }
+   .sidebar { 
+     grid-area: sidebar;
+     background-color: #ce6f52; 
+   }
+   .footer { 
+     grid-area: footer;
+     background-color: #a26aad; 
+   }
+ 
+   /* 给所有盒子添加一些基础样式 */
+   .container > div {
+     padding: 20px;
+     color: white;
+     font-size: 20px;
+     text-align: center;
+     line-height: 80px; /* 使文本垂直居中 */
+   }
+ </style>
+ </head>
+ <body>
+ 
+ <div class="container">
+   <div class="header">Header</div>
+   <div class="main">Main Content</div>
+   <div class="sidebar">Sidebar</div>
+   <div class="footer">Footer</div>
+ </div>
+ 
+ </body>
+ </html>
